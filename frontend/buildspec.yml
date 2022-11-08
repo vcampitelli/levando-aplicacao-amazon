@@ -1,0 +1,22 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+  pre_build:
+    commands:
+      - echo "Instalando dependências..."
+      - yarn install
+  build:
+    commands:
+      - echo "Fazendo build do projeto..."
+      - yarn run build
+  post_build:
+    commands:
+      - echo "Subindo arquivos no S3..."
+      - aws s3 sync build/ s3://$S3_BUCKET_NAME
+      - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths /index.html
+artifacts:
+  base-directory: build
+  files:
+    - '**/*'
