@@ -1,0 +1,9 @@
+version: 0.0
+os: linux
+files:
+  - source: /backend
+    destination: /usr/share/nginx/html
+hooks:
+  AfterInstall:
+    - location: scripts/install-prod.sh
+      runas: nginx
