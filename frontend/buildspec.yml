@@ -12,6 +12,9 @@ phases:
       - echo "Fazendo build do projeto..."
       - yarn run build
 artifacts:
-  base-directory: build
+  base-directory: frontend/build
   files:
     - '**/*'
+cache:
+  paths:
+    - 'frontend/node_modules'
