@@ -21,9 +21,9 @@ return function (ContainerBuilder $containerBuilder) {
                     'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/app.log',
                     'level' => Logger::DEBUG,
                 ],
-                'pdo_dsn' => $_ENV['APP_PDO_DSN'],
-                'pdo_username' => $_ENV['APP_PDO_USERNAME'],
-                'pdo_password' => $_ENV['APP_PDO_PASSWORD'],
+                'pdo_dsn' => $_ENV['APP_PDO_DSN'] ?? 'mysql:host=localhost;dbname=app',
+                'pdo_username' => $_ENV['APP_PDO_USERNAME'] ?? 'root',
+                'pdo_password' => $_ENV['APP_PDO_PASSWORD'] ?? 'root',
             ]);
         }
     ]);

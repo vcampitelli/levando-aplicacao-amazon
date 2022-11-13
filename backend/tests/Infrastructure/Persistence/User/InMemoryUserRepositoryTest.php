@@ -13,7 +13,7 @@ class InMemoryUserRepositoryTest extends TestCase
 {
     public function testFindAll()
     {
-        $user = new User(1, 'bill.gates', 'Bill', 'Gates');
+        $user = new User(1, 'bill.gates', 'Bill Gates');
 
         $userRepository = new InMemoryUserRepository([1 => $user]);
 
@@ -23,11 +23,11 @@ class InMemoryUserRepositoryTest extends TestCase
     public function testFindAllUsersByDefault()
     {
         $users = [
-            1 => new User(1, 'bill.gates', 'Bill', 'Gates'),
-            2 => new User(2, 'steve.jobs', 'Steve', 'Jobs'),
-            3 => new User(3, 'mark.zuckerberg', 'Mark', 'Zuckerberg'),
-            4 => new User(4, 'evan.spiegel', 'Evan', 'Spiegel'),
-            5 => new User(5, 'jack.dorsey', 'Jack', 'Dorsey'),
+            1 => new User(1, 'bill.gates', 'Bill Gates'),
+            2 => new User(2, 'steve.jobs', 'Steve Jobs'),
+            3 => new User(3, 'mark.zuckerberg', 'Mark Zuckerberg'),
+            4 => new User(4, 'evan.spiegel', 'Evan Spiegel'),
+            5 => new User(5, 'jack.dorsey', 'Jack Dorsey'),
         ];
 
         $userRepository = new InMemoryUserRepository();
@@ -37,7 +37,7 @@ class InMemoryUserRepositoryTest extends TestCase
 
     public function testFindUserOfId()
     {
-        $user = new User(1, 'bill.gates', 'Bill', 'Gates');
+        $user = new User(1, 'bill.gates', 'Bill Gates');
 
         $userRepository = new InMemoryUserRepository([1 => $user]);
 

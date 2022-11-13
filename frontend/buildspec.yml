@@ -3,10 +3,12 @@ phases:
   install:
     commands:
       - cd frontend
-  pre_build:
-    commands:
       - echo "Instalando dependências..."
       - yarn install --prod
+  pre_build:
+    commands:
+      - echo "Rodando testes..."
+      - yarn test --ci
   build:
     commands:
       - echo "Fazendo build do projeto..."
