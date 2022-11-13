@@ -3,12 +3,16 @@ phases:
   install:
     commands:
       - cd backend
-      - echo "Instalando dependências..."
-      - composer install --no-dev
+      - echo "Instalando dependências de teste..."
+      - composer install --dev
   pre_build:
     commands:
       - echo "Rodando testes..."
       - composer test --no-interaction
+  build:
+    commands:
+      - echo "Instalando dependências de produção..."
+      - composer install --no-dev
 artifacts:
   files:
     - 'backend/app/*'
