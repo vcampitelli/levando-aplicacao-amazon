@@ -5,20 +5,15 @@ phases:
       - cd backend
       - echo "Instalando dependências de teste..."
       - composer install --dev
-  pre_build:
+  build:
     commands:
       - echo "Rodando testes..."
       - composer test --no-interaction
-  build:
-    commands:
-      - echo "Instalando dependências de produção..."
-      - composer install --no-dev
 artifacts:
   files:
-    - 'backend/app/*'
-    - 'backend/public/*'
-    - 'backend/src/*'
-    - 'backend/vendor/*'
+    - 'backend/app/**/*'
+    - 'backend/public/**/*'
+    - 'backend/src/**/*'
     - 'backend/composer.json'
     - 'backend/composer.lock'
     - 'appspec.yml'
