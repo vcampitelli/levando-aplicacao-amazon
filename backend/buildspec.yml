@@ -3,8 +3,8 @@ phases:
   install:
     commands:
       - cd backend
-      - echo "Instalando dependências de teste..."
-      - composer install --dev
+      - echo "Instalando dependências para teste..."
+      - composer install
   build:
     commands:
       - echo "Rodando testes..."
@@ -20,4 +20,4 @@ artifacts:
     - 'scripts/install-prod.sh'
 cache:
   paths:
-    - 'backend/vendor'
+    - 'backend/vendor/**/*'
