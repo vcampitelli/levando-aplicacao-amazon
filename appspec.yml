@@ -8,6 +8,10 @@ permissions:
     owner: nginx
     group: nginx
 hooks:
+  BeforeInstall:
+    - location: scripts/env-vars-inject.sh
+      timeout: 300
   AfterInstall:
     - location: scripts/install-prod.sh
       runas: nginx
+      timeout: 300

@@ -15,10 +15,10 @@ class ResponseEmitter extends SlimResponseEmitter
     public function emit(ResponseInterface $response): void
     {
         // This variable should be set to the allowed host from which your API can be accessed with
-        if (!empty($_ENV['CORS_ORIGIN'])) {
+        if (!empty($_ENV['APP_CORS_ORIGIN'])) {
             $response = $response
                 ->withHeader('Access-Control-Allow-Credentials', 'true')
-                ->withHeader('Access-Control-Allow-Origin', $_ENV['CORS_ORIGIN'])
+                ->withHeader('Access-Control-Allow-Origin', $_ENV['APP_CORS_ORIGIN'])
                 ->withHeader(
                     'Access-Control-Allow-Headers',
                     'X-Requested-With, Content-Type, Accept, Origin, Authorization',
