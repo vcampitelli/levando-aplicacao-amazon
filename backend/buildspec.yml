@@ -3,6 +3,8 @@ phases:
   install:
     commands:
       - cd backend
+      - echo "Configurando cache..."
+      - composer config cache-dir /tmp/cache
       - echo "Instalando dependências para teste..."
       - composer install
   build:
@@ -11,13 +13,13 @@ phases:
       - composer test --no-interaction
 artifacts:
   files:
+    - 'appspec.yml'
     - 'backend/app/**/*'
     - 'backend/public/**/*'
     - 'backend/src/**/*'
     - 'backend/composer.json'
     - 'backend/composer.lock'
-    - 'appspec.yml'
-    - 'scripts/install-prod.sh'
+    - 'scripts/**/*'
 cache:
   paths:
-    - 'backend/vendor/**/*'
+    - '/tmp/cache/**/*'

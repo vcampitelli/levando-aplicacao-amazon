@@ -3,6 +3,8 @@ phases:
   install:
     commands:
       - cd frontend
+      - echo "Configurando cache..."
+      - yarn config set cache-folder /tmp/yarn
       - echo "Instalando dependências..."
       - yarn install --prod
   pre_build:
@@ -19,4 +21,4 @@ artifacts:
     - '**/*'
 cache:
   paths:
-    - 'frontend/node_modules/**/*'
+    - '/tmp/yarn/**/*'
