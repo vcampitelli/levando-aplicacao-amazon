@@ -13,15 +13,14 @@
         <link rel="stylesheet" href="reveal.js/dist/theme/white.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Open+Sans:wght@400;600&display=swap"
-              rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/app.css">
     </head>
     <body>
         <div class="reveal">
             <div class="slides">
                 <section class="first-slide">
-                    <h1>Levando sua aplicação para a Amazon</h1>
+                    <h1>Levando sua aplicação<br>para a Amazon</h1>
                     <h2>Vinícius Campitelli @ PHP Conference 2022</h2>
                 </section>
 
@@ -92,7 +91,7 @@
                 </section> <!-- Sobre mim -->
 
                 <section> <!-- Computação em Nuvem -->
-                    <section data-auto-animate data-auto-animate-restart>
+                    <section>
                         <h1>Computação em Nuvem</h1>
                     </section>
                     <section> <!-- Conceito NIST -->
@@ -116,7 +115,7 @@
                     </section> <!-- Conceito NIST -->
                     <section> <!-- Conceito NIST -->
                         <h1 class="subtitle">Computação em Nuvem</h1>
-                        <h2>Conceito segundo o NIST*</h2>
+                        <h2>Conceito segundo o NIST</h2>
 
                         <p>Características essenciais:</p>
                         <div class="fragment mb-1">
@@ -154,16 +153,12 @@
                            rel="noopener" class="reference">
                             Proposta SP 800-145
                         </a>
-
-                        <p class="smaller">
-                            <em>* Instituto Nacional de Padrões e Tecnologia dos Estados Unidos</em>
-                        </p>
                     </section>
                     <section> <!-- Vantagens e desvantagens -->
                         <h1 class="subtitle">Computação em Nuvem</h1>
                         <h2>Vantagens e desvantagens</h2>
 
-                        <div class="d-flex half-columns">
+                        <div class="d-flex half-columns" style="align-items: start">
                             <div>
                                 <h2 class="mb-1 h3 fragment">Vantagens</h2>
                                 <ul>
@@ -221,7 +216,7 @@
                 </section> <!-- Computação em Nuvem -->
 
                 <section> <!-- Amazon Web Services -->
-                    <section data-auto-animate data-auto-animate-restart>
+                    <section>
                         <h1>Amazon Web Services</h1>
                     </section>
                     <section> <!-- Visão geral -->
@@ -368,6 +363,7 @@
                     </section>
                     <section data-auto-animate>
                         <h1>Aplicação</h1>
+                        <img src="img/aplicacao.png" alt="Aplicação">
                     </section>
                 </section> <!-- Aplicação -->
 
@@ -379,7 +375,7 @@
 
                     <section> <!-- AWS IAM -->
                         <h1 class="subtitle">Serviços &raquo; IAM</h1>
-                        <h2>Introdução</h2>
+                        <h2>Definição</h2>
                         <p>
                             O <em>AWS Identity and Access Management</em> é um serviço responsável pela gestão de
                             identidades e acesso aos serviços de contas da AWS
@@ -441,7 +437,31 @@
                     </section>
                     <section>
                         <h1 class="subtitle">Serviços para nosso frontend &raquo; S3</h1>
-                        <h2>Introdução</h2>
+                        <h2>Definição</h2>
+                        <p>
+                            O <em>Amazon Simple Storage Service</em> é um serviço de armazenamento de objetos que
+                            oferece escalabilidade, disponibilidade de dados, segurança e desempenho líderes do setor
+                        </p>
+                        <p>
+                            Clientes de todos os tamanhos e setores podem armazenar e proteger qualquer quantidade de
+                            dados para praticamente qualquer caso de uso, como data lakes, aplicativos nativos da nuvem
+                            e aplicativos móveis
+                        </p>
+                        <p>
+                            Com classes de armazenamento econômicas e recursos de gerenciamento fáceis de usar, você
+                            pode otimizar custos, organizar dados e configurar controles de acesso ajustados para
+                            atender a requisitos específicos de negócios, organizacionais e de conformidade
+                        </p>
+                        <a href="https://aws.amazon.com/pt/s3/" target="_blank" rel="noopener"
+                           class="reference">
+                            aws.amazon.com/s3
+                        </a>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Serviços para nosso frontend &raquo; S3</h1>
+                        <h2>Exemplo de uso</h2>
+                        <img src="https://d1.awsstatic.com/s3-pdp-redesign/product-page-diagram_Amazon-S3_HIW.cf4c2bd7aa02f1fe77be8aa120393993e08ac86d.png"
+                             alt="S3">
                     </section>
                     <section>
                         <h1 class="subtitle">Serviços para nosso frontend &raquo; S3</h1>
@@ -459,7 +479,7 @@
                     </section>
                     <section>
                         <h1 class="subtitle">Serviços para nosso frontend &raquo; CloudFront</h1>
-                        <h2>Introdução</h2>
+                        <h2>Definição</h2>
                         <p>
                             Serviço de Rede de Entrega de Conteúdo <em>(do inglês Content Delivery Network, resultando
                             na sigla CDN)</em>, responsável pelo <em>caching</em> e distribuição de conteúdo a partir de
@@ -532,7 +552,7 @@
                     </section>
                     <section>
                         <h1 class="subtitle">Serviços para nosso frontend &raquo; Route 53</h1>
-                        <h2>Introdução</h2>
+                        <h2>Definição</h2>
 
                         <p>
                             Serviço de DNS altamente integrado com funcionalidades da AWS <em>(como EC2, S3, ELB)</em>,
@@ -561,16 +581,15 @@
                     </section>
                     <section>
                         <h1 class="subtitle">Serviços para nosso frontend &raquo; Route 53</h1>
-                        <h2>DNS</h2>
+                        <h2>Exemplo de uso</h2>
 
-                        <img src="https://d1.awsstatic.com/Route53/how-route-53-routes-traffic.8d313c7da075c3c7303aaef32e89b5d0b7885e7c.png"
-                             class="mt-0" alt="Como funciona a internet?">
+                        <img src="https://d1.awsstatic.com/Route53/product-page-diagram_Amazon-Route-53_HIW%402x.4c2af00405a0825f83fca113352b480b19d9210e.png"
+                             alt="Route 53">
 
                         <br>
-                        <a href="https://aws.amazon.com/pt/route53/what-is-dns/" target="_blank"
-                           rel="noopener" class="reference">aws.amazon.com/route53</a>
-                        <a href="https://www.cloudflare.com/pt-br/learning/dns/what-is-dns/" target="_blank"
-                           rel="noopener" class="reference">cloudflare.com/learning/dns</a>
+                        <a href="https://aws.amazon.com/pt/route53/" target="_blank" rel="noopener" class="reference">
+                            aws.amazon.com/route53
+                        </a>
                     </section>
                     <section>
                         <h1 class="subtitle">Serviços para nosso frontend &raquo; Route 53</h1>
@@ -582,17 +601,21 @@
                 </section> <!-- Route 53 -->
 
                 <section> <!-- EC2 -->
-                    <section data-auto-animate data-auto-animate-restart>
+                    <section>
                         <h1 class="subtitle">Serviços para nosso backend</h1>
                         <h2>EC2</h2>
                     </section>
-                    <section data-auto-animate>
+                    <section>
                         <h1 class="subtitle">Serviços para nosso backend &raquo; EC2</h1>
-                        <h2>EC2</h2>
-                        <p>AMI</p>
+                        <h2>Definição</h2>
+                        <p>
+                            O <em>Amazon Elastic Compute Cloud</em> é uma plataforma de computação mais ampla e
+                            profunda, com mais de 500 tipos de instâncias e opções de processador, armazenamento, rede e
+                            sistema operacional para ajudá-lo a atender melhor às necessidades de sua carga de trabalho
+                        </p>
 
-                        <a href="https://" class="reference" target="_blank" rel="noopener">
-                            Nome do site
+                        <a href="https://aws.amazon.com/ec2/" class="reference" target="_blank" rel="noopener">
+                            aws.amazon.com/ec2
                         </a>
                     </section>
                     <section data-auto-animate>
@@ -605,21 +628,24 @@
                 </section> <!-- EC2 -->
 
                 <section> <!-- RDS -->
-                    <section data-auto-animate data-auto-animate-restart>
+                    <section>
                         <h1 class="subtitle">Serviços para nosso backend</h1>
                         <h2>RDS</h2>
                     </section>
-                    <section data-auto-animate>
-                        <h1 class="subtitle">Serviços para nosso backend</h1>
-                        <h2>RDS</h2>
+                    <section>
+                        <h1 class="subtitle">Serviços para nosso backend &raquo; RDS</h1>
+                        <h2>Definição</h2>
+                        <p>
+                            O <em>Amazon Relational Database Services</em> é uma coleção de serviços gerenciados que
+                            simplifica a configuração, operação e dimensionamento de bancos de dados na nuvem
+                        </p>
 
-                        <a href="https://" class="reference" target="_blank" rel="noopener">
-                            Nome do site
+                        <a href="https://aws.amazon.com/rds/" class="reference" target="_blank" rel="noopener">
+                            aws.amazon.com/rds
                         </a>
                     </section>
-                    <section data-auto-animate>
-                        <h1 class="subtitle">Serviços para nosso backend</h1>
-                        <h2>RDS</h2>
+                    <section>
+                        <h1 class="subtitle">Serviços para nosso backend &raquo; RDS</h1>
                         <h2>Prática</h2>
                         <video muted controls>
                             <source src="videos/rds.mp4" type="video/mp4">
@@ -633,210 +659,119 @@
                         <h2>Elastic Load Balancing</h2>
                     </section>
                     <section> <!-- Load Balancer -->
-                        <h1>Load Balancer</h1>
-
-                        <h3 class="mb-0">Conceito</h3>
+                        <h1 class="subtitle">Serviços para nosso backend &raquo; Elastic Load Balancing</h1>
+                        <h2>Definição</h2>
                         <p>
                             O balanceador de carga é uma ferramenta para fazer a distribuição do tráfego de rede entre
                             destinos diferentes para permitir a escalabilidade da aplicação
                         </p>
                         <p>
                             Cada vez que uma máquina é criada, ela deve avisar o <em>Load Balancer</em> para que ele
-                            atualize seu cadastro interno
+                            atualize seu cadastro interno para poder começar a rotear as requisições para o novo serviço
                         </p>
 
-                        <h3 class="mt-2 mb-0"><em>Health check</em></h3>
+                        <h3><em>Health check</em></h3>
                         <p>
                             Periodicamente, o <em>Load Balancer</em> faz checagens nos servidores cadastrados para
                             verificar se eles estão respondendo, removendo-os se não responderem
                         </p>
                     </section> <!-- Load Balancer -->
                     <section> <!-- Load Balancer -->
-                        <h1>Load Balancer</h1>
+                        <h1 class="subtitle">Serviços para nosso backend &raquo; Elastic Load Balancing</h1>
                         <div class="r-stack justify-start">
-                            <h2 class="mb-1 fragment fade-out" data-fragment-index="1">
+                            <h2 class="fragment fade-out" data-fragment-index="1">
                                 Arquitetura sem Load Balancer
                             </h2>
-                            <h2 class="mb-1 fragment" data-fragment-index="1">
+                            <h2 class="fragment" data-fragment-index="1">
                                 Arquitetura com Load Balancer
                             </h2>
                         </div>
                         <img src="img/diagrama.svg" class="inject-svg" alt="Arquitetura com Load Balancer">
                     </section> <!-- Load Balancer -->
                     <section> <!-- AWS Elastic Load Balancing: Conceitos -->
-                        <h1>AWS Elastic Load Balancing</h1>
+                        <h1 class="subtitle">Serviços para nosso backend &raquo; Elastic Load Balancing</h1>
                         <h2>Conceitos</h2>
 
-                        <h3 class="mb-0"><em>Listeners</em></h3>
+                        <h3><em>Listeners</em></h3>
                         <p>
-                            Configuração que especifica o protocolo, porta e ação a ser tomada <em>(como autenticação
-                            com o <a href="https://aws.amazon.com/pt/cognito/" target="_blank" rel="noopener">
-                                Cognito</a>, resposta fixa, redirecionamento de URL ou encaminhamento para o
-                            destino)</em>
+                            Configuração que especifica o protocolo, porta e ação a ser tomada <em>(como autenticação,
+                            uma resposta fixa, redirecionamento de URL ou encaminhamento para o destino)</em>
                         </p>
                         <a href="https://docs.aws.amazon.com/pt_br/elasticloadbalancing/latest/application/load-balancer-listeners.html"
-                           target="_blank" rel="noopener" class="reference">
+                           target="_blank" rel="noopener" class="reference mb-2">
                             Listeners for your Application Load Balancers
                         </a>
 
-                        <h3 class="mb-0 mt-2"><em>Target Groups</em></h3>
+                        <h3><em>Target Groups</em></h3>
                         <P>
-                            Configuração para rotear a requisição para o destino
+                            Configuração que define como a requisição deve chegar em um servidor de destino
                         </P>
                         <a href="https://docs.aws.amazon.com/pt_br/elasticloadbalancing/latest/application/load-balancer-target-groups.html"
                            target="_blank" rel="noopener" class="reference">
                             Target groups for your Application Load Balancers
                         </a>
                     </section> <!-- AWS Elastic Load Balancing: Conceitos -->
+                    <section>
+                        <h1 class="subtitle">Serviços para nosso backend &raquo; Elastic Load Balancing</h1>
+                        <h2>Prática</h2>
+
+                        <video muted controls>
+                            <source src="videos/load-balancer.mp4" type="video/mp4">
+                        </video>
+                    </section>
                 </section> <!-- Elastic Load Balancing  -->
 
-                <section> <!-- API Gateway -->
-                    <section data-auto-animate data-auto-animate-restart>
-                        <h1 class="subtitle">Serviços para nosso backend</h1>
-                        <h2>API Gateway</h2>
-                    </section>
-                    <section data-auto-animate>
-                        <h1 class="subtitle">Serviços para nosso backend</h1>
-                        <h2>API Gateway</h2>
-
-                        <a href="https://" class="reference" target="_blank" rel="noopener">
-                            Nome do site
-                        </a>
-                    </section>
-                </section> <!-- API Gateway -->
-
                 <section> <!-- Auto Scaling -->
-                    <section data-auto-animate data-auto-animate-restart>
+                    <section>
                         <h1 class="subtitle">Serviços para nosso backend</h1>
                         <h2>Auto Scaling</h2>
                     </section>
-                    <section data-auto-animate>
-                        <h1 class="subtitle">Serviços para nosso backend</h1>
-                        <h2>Auto Scaling</h2>
+                    <section>
+                        <h1 class="subtitle">Serviços para nosso backend &raquo; Auto Scaling</h1>
+                        <h2>Definição</h2>
+                        <p>
+                            Serviço que monitora seus aplicativos e ajusta automaticamente a capacidade para manter um
+                            desempenho estável e previsível com o menor custo possível
+                        </p>
+                        <p>
+                            Com ele, é fácil configurar a escalabilidade de aplicativos para vários recursos em vários
+                            serviços em minutos
+                        </p>
 
-                        <a href="https://" class="reference" target="_blank" rel="noopener">
-                            Nome do site
+                        <a href="https://aws.amazon.com/autoscaling/" class="reference" target="_blank" rel="noopener">
+                            aws.amazon.com/autoscaling
                         </a>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Serviços para nosso backend &raquo; Auto Scaling</h1>
+                        <h2>Prática</h2>
+
+                        <video muted controls>
+                            <source src="videos/load-balancer.mp4" type="video/mp4">
+                        </video>
                     </section>
                 </section> <!-- Auto Scaling -->
 
-                <div style="display:none">
-                <section> <!-- CodePipeline -->
-                    <section data-auto-animate data-auto-animate-restart>
-                        <h1 class="subtitle">Serviços para o CD</h1>
-                        <h2>CodePipeline</h2>
-                    </section>
-                    <section data-auto-animate>
-                        <h1 class="subtitle">Serviços para o CD</h1>
-                        <h2>CodePipeline</h2>
-
-                        <a href="https://" class="reference" target="_blank" rel="noopener">
-                            Nome do site
-                        </a>
-                    </section>
-                </section> <!-- CodePipeline -->
-
-                <section> <!-- CodeBuild -->
-                    <section data-auto-animate data-auto-animate-restart>
-                        <h1 class="subtitle">Serviços para o CD</h1>
-                        <h2>CodeBuild</h2>
-                    </section>
-                    <section data-auto-animate>
-                        <h1 class="subtitle">Serviços para o CD</h1>
-                        <h2>CodeBuild</h2>
-
-                        <a href="https://" class="reference" target="_blank" rel="noopener">
-                            Nome do site
-                        </a>
-                    </section>
-                </section> <!-- CodeBuild -->
-
-                <section> <!-- CodeDeploy -->
-                    <section data-auto-animate data-auto-animate-restart>
-                        <h1 class="subtitle">Serviços para o CD</h1>
-                        <h2>CodeDeploy</h2>
-                    </section>
-                    <section data-auto-animate>
-                        <h1 class="subtitle">Serviços para o CD</h1>
-                        <h2>CodeDeploy</h2>
-
-                        <a href="https://" class="reference" target="_blank" rel="noopener">
-                            Nome do site
-                        </a>
-                    </section>
-                </section> <!-- CodeDeploy -->
-
-                <section> <!-- Systems Manager -->
-                    <section data-auto-animate data-auto-animate-restart>
-                        <h1 class="subtitle">Serviços para o CD</h1>
-                        <h2>Systems Manager</h2>
-                    </section>
-                    <section data-auto-animate>
-                        <h1 class="subtitle">Serviços para o CD</h1>
-                        <h2>Systems Manager</h2>
-                        Parameter Store
-
-                        <a href="https://" class="reference" target="_blank" rel="noopener">
-                            Nome do site
-                        </a>
-                    </section>
-                </section> <!-- Systems Manager -->
-
-                <section> <!-- Lambda -->
-                    <section data-auto-animate data-auto-animate-restart>
-                        <h1 class="subtitle">Serviços para o CD</h1>
-                        <h2>Lambda</h2>
-                    </section>
-                    <section data-auto-animate>
-                        <h1 class="subtitle">Serviços para o CD</h1>
-                        <h2>Lambda</h2>
-
-                        <a href="https://" class="reference" target="_blank" rel="noopener">
-                            Nome do site
-                        </a>
-                    </section>
-                </section> <!-- Lambda -->
-                </div>
-
-                <section>
-                    JWT na API e no Gateway
-                    Configurar API Gateway
-                    AMI sudo amazon - linux - extras install nginx1 12 Factor App - Backend -
-                    Sesssões - Arquivos
-                    AWS Certificate Manager nas ec2 ao invés do let 's encrypt
-
-                    react router s3 cloudfront
-
-                    RDS com IAM
-
-                    Codepipeline
-                    AWS Lambda pro cloudfront invalidation
-
-                    Beanstalk
-
-                    IAM Instance profile no codedeploy agent
-
-                    Parameter Store / Secrets Manager
-
-                    Testar auto scaling
-
-                    API Gateway
-                </section>
-
-                <section> <!-- Arquitetura do Deploy -->
+                <section> <!-- Arquitetura -->
                     <section>
-                        <h2>Arquitetura do Deploy</h2>
-                        <img src="img/deploy.svg" id="svg-deploy" width="937" height="601">
+                        <h1>Arquitetura</h1>
                     </section>
                     <section>
-                        <h2>Arquitetura do Frontend</h2>
+                        <h1 class="subtitle">Arquitetura</h1>
+                        <h2>Deploy</h2>
+                        <img src="img/deploy.svg" id="svg-deploy" class="inject-svg" width="937" height="601">
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Arquitetura</h1>
+                        <h2>Frontend</h2>
                         <img src="img/frontend.svg">
                     </section>
                     <section>
-                        <h2>Arquitetura da API</h2>
+                        <h1 class="subtitle">Arquitetura</h1>
+                        <h2>Backend</h2>
                         <img src="img/api.svg">
                     </section>
-                </section> <!-- Arquitetura do Deploy -->
+                </section> <!-- Arquitetura -->
 
                 <section> <!-- Obrigado -->
                     <div class="d-flex">
@@ -931,7 +866,7 @@
                     }
                 },
             });
-            SVGInject(document.getElementById('svg-deploy'));
+            SVGInject(document.querySelectorAll('.inject-svg'));
         </script>
     </body>
 </html>

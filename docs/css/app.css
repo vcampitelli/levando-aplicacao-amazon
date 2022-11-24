@@ -1,7 +1,7 @@
 :root {
   --r-background-color: #fff;
-  --r-main-font: "Open Sans", sans-serif;
-  --r-main-font-size: 24px;
+  --r-main-font: 'IBM Plex Sans', sans-serif;
+  --r-main-font-size: 28px;
   --r-main-color: #333f4e;
   --r-heading-font: var(--r-main-font);
   --r-heading-font-weight: 600;
@@ -23,7 +23,8 @@
   letter-spacing: -1px;
   text-align: left;
 }
-.reveal pre {
+.reveal pre,
+.reveal blockquote {
   margin-left: 0;
 }
 .text-center {
@@ -41,6 +42,16 @@
 .my-4 {
   margin-top: 4rem !important;
   margin-bottom: 4rem !important;
+}
+a.mb-2 {
+  display: block;
+}
+
+/* First slide */
+.first-slide > h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #999;
 }
 
 /* Scaffolding */
