@@ -42,6 +42,9 @@ li > ul {
 li > ul > li {
   margin-top: 1rem;
 }
+.reveal .slides section .fragment.highlight-blue.visible {
+  color: var(--r-link-color-dark);
+}
 
 /* First slide */
 .first-slide > h2 {
@@ -83,6 +86,11 @@ a.mb-2 {
 }
 
 /* Tipografia */
+h1,
+h2 {
+  border-left: 8px var(--r-link-color) solid;
+  padding-left: 16px;
+}
 h1.subtitle {
   color: #aaa;
   font-weight: 100;

@@ -19,7 +19,6 @@
         "ext-pdo": "*",
         "cycle/annotated": "^3.2",
         "cycle/orm": "^2.2",
-        "lcobucci/jwt": "^4.2",
         "monolog/monolog": "^2.8",
         "php-di/php-di": "^6.4",
         "slim/psr7": "^1.5",
