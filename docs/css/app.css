@@ -45,6 +45,10 @@ li > ul > li {
 .reveal .slides section .fragment.highlight-blue.visible {
   color: var(--r-link-color-dark);
 }
+.reveal .slide-number {
+  right: auto;
+  left: 8px;
+}
 
 /* First slide */
 .first-slide > h2 {
@@ -90,6 +94,14 @@ h1,
 h2 {
   border-left: 8px var(--r-link-color) solid;
   padding-left: 16px;
+}
+.first-slide > h1,
+.first-slide > h2 {
+  border-left: 0;
+  padding-left: 0;
+}
+.first-slide > h1 {
+    color: var(--r-link-color);
 }
 h1.subtitle {
   color: #aaa;
