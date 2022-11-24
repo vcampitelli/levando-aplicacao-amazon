@@ -90,6 +90,17 @@
                     </section>
                 </section> <!-- Sobre mim -->
 
+                <section> <!-- Aplicação -->
+                    <section>
+                        <h1>Aplicação</h1>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Aplicação</h1>
+                        <h2>Arquitetura do exemplo</h2>
+                        <img src="img/aplicacao.png" alt="Aplicação">
+                    </section>
+                </section> <!-- Aplicação -->
+
                 <section> <!-- Computação em Nuvem -->
                     <section>
                         <h1>Computação em Nuvem</h1>
@@ -357,18 +368,8 @@
                     </section> <!-- Infraestrutura global -->
                 </section> <!-- Amazon Web Services -->
 
-                <section> <!-- Aplicação -->
-                    <section data-auto-animate data-auto-animate-restart>
-                        <h1>Aplicação</h1>
-                    </section>
-                    <section data-auto-animate>
-                        <h1>Aplicação</h1>
-                        <img src="img/aplicacao.png" alt="Aplicação">
-                    </section>
-                </section> <!-- Aplicação -->
-
                 <section> <!-- IAM -->
-                    <section data-auto-animate data-auto-animate-restart>
+                    <section>
                         <h1 class="subtitle">Serviços</h1>
                         <h2>AWS IAM</h2>
                     </section>
@@ -431,7 +432,7 @@
                 </section> <!-- IAM -->
 
                 <section> <!-- S3 -->
-                    <section data-auto-animate data-auto-animate-restart>
+                    <section>
                         <h1 class="subtitle">Serviços para nosso frontend</h1>
                         <h2>S3</h2>
                     </section>
@@ -473,7 +474,7 @@
                 </section>
 
                 <section> <!-- CloudFront -->
-                    <section data-auto-animate data-auto-animate-restart>
+                    <section>
                         <h1 class="subtitle">Serviços para nosso frontend</h1>
                         <h2>CloudFront</h2>
                     </section>
@@ -546,7 +547,7 @@
                 </section> <!-- CloudFront -->
 
                 <section> <!-- Route 53 -->
-                    <section data-auto-animate data-auto-animate-restart>
+                    <section>
                         <h1 class="subtitle">Serviços para nosso frontend</h1>
                         <h2>Route 53</h2>
                     </section>
@@ -618,7 +619,7 @@
                             aws.amazon.com/ec2
                         </a>
                     </section>
-                    <section data-auto-animate>
+                    <section>
                         <h1 class="subtitle">Serviços para nosso backend &raquo; EC2</h1>
                         <h2>Prática</h2>
                         <video muted controls>
@@ -654,7 +655,7 @@
                 </section> <!-- RDS -->
 
                 <section> <!-- Elastic Load Balancing  -->
-                    <section data-auto-animate data-auto-animate-restart>
+                    <section>
                         <h1 class="subtitle">Serviços para nosso backend</h1>
                         <h2>Elastic Load Balancing</h2>
                     </section>
@@ -773,6 +774,92 @@
                     </section>
                 </section> <!-- Arquitetura -->
 
+                <section> <!-- Migração -->
+                    <section>
+                        <h1>Migração</h1>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Migração</h1>
+                        <h2>Dicas ao migrar para a <em>cloud</em></h2>
+                        <ul>
+                            <li class="fragment">
+                                Entenda os conceitos do
+                                <a href="https://12factor.net/pt_br/" target="_blank" rel="noopener">The Twelve-Factor
+                                    App</a>, manifesto criado para ajudar desenvolvedores a criar aplicações para a
+                                nuvem
+                                <ul>
+                                    <li>
+                                        Exemplo: utilize variáveis de ambiente para configurar parâmetros e credenciais
+                                        que dependam do ambiente
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section data-auto-animate>
+                        <h1 class="subtitle">Migração</h1>
+                        <h2>Dicas ao migrar para a <em>cloud</em></h2>
+                        <ul>
+                            <li>
+                                Não dependa diretamente do sistema de arquivos <em>(por exemplo, com chamadas diretas a
+                                funções como <code>fopen()</code>)</em>, já que os servidores estão sendo constantemente
+                                criados ou desativados pelas políticas de <em>auto scaling</em>
+                                <ul>
+                                    <li class="fragment">
+                                        Até é possível compartilhar uma partição de disco entre todas suas instâncias do
+                                        EC2 através do
+                                        <a href="https://aws.amazon.com/efs/" target="_blank" rel="noopener">EFS</a>,
+                                        por exemplo
+                                    </li>
+                                    <li class="fragment">
+                                        Abstraia as interações com os arquivos para uma classe, criando duas: uma para
+                                        acessos locais <em>(com as funções diretas do PHP)</em> e outro quando estiver
+                                        rodando na <em>cloud</em> <em>(com chamadas ao S3, por exemplo)</em>
+                                    </li>
+                                    <li class="fragment">
+                                        Como as sessões do PHP são armazenadas por padrão em arquivos, é preciso
+                                        usar outra abordagem, por exemplo sistemas em memória como
+                                        <a href="https://aws.amazon.com/elasticache/memcached/" target="_blank"
+                                           rel="noopener">ElastiCache for Memcached</a> ou
+                                        <a href="https://aws.amazon.com/memorydb/" target="_blank" rel="noopener">
+                                            MemoryDB for Redis
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section data-auto-animate>
+                        <h1 class="subtitle">Migração</h1>
+                        <h2>Dicas ao migrar para a <em>cloud</em></h2>
+                        <p>Algumas referências:</p>
+                        <ul>
+                            <li>
+                                <a href="https://12factor.net/pt_br/" target="_blank" rel="noopener">
+                                    The Twelve-Factor App
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/"
+                                   target="_blank" rel="noopener">
+                                    AWS: Migração para a nuvem
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://aws.amazon.com/pt/cloud-migration/" target="_blank" rel="noopener">
+                                    AWS: 6 Strategies for Migrating Applications to the Cloud
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://learn.microsoft.com/pt-br/azure/cloud-adoption-framework/migrate/azure-best-practices/contoso-migration-overview"
+                                   target="_blank" rel="noopener">
+                                    Azure: Visão geral dos exemplos de migração de aplicativos para o Azure
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </section> <!-- Migração -->
+
                 <section> <!-- Obrigado -->
                     <div class="d-flex">
                         <p class="fw-bold text-center">Obrigado!</p>
@@ -825,7 +912,7 @@
                 </section> <!-- Obrigado -->
 
                 <section class="text-center">
-                    <h2>Workshops de TI</h2>
+                    <h2>Treinamentos in company</h2>
                     <div class="d-flex half-columns">
                         <div style="line-height: 1.5">
                             Gostou? Então conheça meus treinamentos corporativos e customizados sobre Desenvolvimento,

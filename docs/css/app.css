@@ -14,8 +14,8 @@
   --r-link-color-dark: var(--r-link-color);
   --r-accent-color: #ec7211;
   --r-code-hljs-bg-color: #272932;
-  --r-code-inline-bg-color: #fafafa;
-  --r-code-inline-color: #d8a47f;
+  --r-code-inline-bg-color: #f5f5f5;
+  --r-code-inline-color: var(--r-link-color);
 }
 
 /* Layout */
@@ -30,21 +30,17 @@
 .text-center {
   text-align: center !important;
 }
-.mt-0 {
-  margin-top: 0 !important;
+code:not(.hljs) {
+  padding: 0.3em;
+  font-size: 0.8em;
+  background: var(--r-code-inline-bg-color);
+  color: var(--r-code-inline-color);
 }
-.mb-0 {
-  margin-bottom: 0 !important;
+li > ul {
+  font-size: 0.9em;
 }
-.mb-2 {
-  margin-bottom: 2rem !important;
-}
-.my-4 {
-  margin-top: 4rem !important;
-  margin-bottom: 4rem !important;
-}
-a.mb-2 {
-  display: block;
+li > ul > li {
+  margin-top: 1rem;
 }
 
 /* First slide */
@@ -68,6 +64,22 @@ a.mb-2 {
 }
 a > img {
   margin: 0 !important;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
+.my-4 {
+  margin-top: 4rem !important;
+  margin-bottom: 4rem !important;
+}
+a.mb-2 {
+  display: block;
 }
 
 /* Tipografia */
