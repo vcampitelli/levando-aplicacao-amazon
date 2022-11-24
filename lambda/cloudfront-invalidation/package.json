@@ -1,0 +1,15 @@
+{
+  "name": "lambda-cloudfront-invalidation",
+  "version": "1.0.0",
+  "description": "Função Lambda para criar uma invalidação no CloudFront como etapa final do CodePipeline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vinícius Campitelli <eu@viniciuscampitelli.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-cloudfront": "^3.209.0",
+    "@aws-sdk/client-codepipeline": "^3.209.0"
+  }
+}
