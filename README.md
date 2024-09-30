@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> Confira a nova versão em [vcampitelli/slides-criando-aplicacoes-nuvem](https://github.com/vcampitelli/slides-criando-aplicacoes-nuvem)
+
 # Levando sua aplicação para a Amazon
 
 Aplicação utilizada na palestra "Levando sua aplicação para a Amazon", onde demonstro na prática os passos
